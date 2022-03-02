@@ -90,8 +90,6 @@ time.sleep(0.3)
 web.find_element_by_xpath('//*[@id="survey_q1a1"]').click() # 자가진단 아니요 클릭
 web.find_element_by_xpath('//*[@id="survey_q2a3"]').click() # 자가진단 검사하지않음 클릭
 web.find_element_by_xpath('//*[@id="survey_q3a1"]').click() # 자가진단 아니요 클릭
-web.find_element_by_xpath('//*[@id="survey_q4a1"]').click() # 자가진단 아니요 클릭
-web.find_element_by_xpath('//*[@id="survey_q5a1"]').click() # 자가지단 아니요클릭
 web.find_element_by_xpath('//*[@id="btnConfirm"]').click() # 확인 클릭
 name = web.find_element_by_xpath('//*[@id="container"]/div/div[2]/div[1]/p[1]').text # 이름/학교명 텍스트 변화
 day = web.find_element_by_xpath('//*[@id="container"]/div/div[2]/div[1]/p[2]').text # 자가진단 일시 날짜 참여 상태 텍스트 변화
