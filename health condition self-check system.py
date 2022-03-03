@@ -88,7 +88,7 @@ time.sleep(1)
 web.find_element_by_xpath('//*[@id="container"]/div/section[2]/div[2]/ul/li/a/em').click() # 확인 클릭
 time.sleep(0.3)
 web.find_element_by_xpath('//*[@id="survey_q1a1"]').click() # 자가진단 아니요 클릭
-web.find_element_by_xpath('//*[@id="survey_q2a3"]').click() # 자가진단 검사하지않음 클릭
+web.find_element_by_xpath('//*[@id="survey_q2a1"]').click() # 자가진단 음성 클릭
 web.find_element_by_xpath('//*[@id="survey_q3a1"]').click() # 자가진단 아니요 클릭
 web.find_element_by_xpath('//*[@id="btnConfirm"]').click() # 확인 클릭
 name = web.find_element_by_xpath('//*[@id="container"]/div/div[2]/div[1]/p[1]').text # 이름/학교명 텍스트 변화
