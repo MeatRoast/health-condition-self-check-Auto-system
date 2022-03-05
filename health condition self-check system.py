@@ -2,7 +2,7 @@
 # 해당 소스를 사용하실려면 아래 모듈을 설치해주세요
 # pip install selenium
 # 해당 시스템은 학교검색에 첫번쩨 학교만 할 수 있습니다. ( 귀차나서 작업안함.. )0
-# 2022-02-10-Thur 시스템 변경으로 업데이트 되었습니다.
+# 2022-03-06-Sun 시스템 버그를 수정하였으며 새로운 선택지를 .
 # 자유롭게 사용이 가능하며 블로그, 카페, 페이스북, SNS 등등 소스코드 업로드, 리뷰 목적 사용 시에는 꼭 GitHub링크 남겨주세요!
 # https://github.com/MeatRoast
 from selenium import webdriver
@@ -51,6 +51,14 @@ bh = '' # YYMMDD
 # PW
 pw = ''
 
+# -----------------------------------------------------------------------------------------
+# 자가진단 2번 문항 답변
+# 음성: 1
+# 양성: 2
+# 검사를 받지 않음: 3
+
+results = ''
+
 # 크롬드라이브
 options = webdriver.ChromeOptions()
 options.add_argument('headless')
@@ -88,7 +96,7 @@ time.sleep(1)
 web.find_element_by_xpath('//*[@id="container"]/div/section[2]/div[2]/ul/li/a/em').click() # 확인 클릭
 time.sleep(0.3)
 web.find_element_by_xpath('//*[@id="survey_q1a1"]').click() # 자가진단 아니요 클릭
-web.find_element_by_xpath('//*[@id="survey_q2a1"]').click() # 자가진단 음성 클릭
+web.find_element_by_xpath(f'//*[@id="survey_q2a{results}"]').click() # 자가진단 음성 클릭
 web.find_element_by_xpath('//*[@id="survey_q3a1"]').click() # 자가진단 아니요 클릭
 web.find_element_by_xpath('//*[@id="btnConfirm"]').click() # 확인 클릭
 name = web.find_element_by_xpath('//*[@id="container"]/div/div[2]/div[1]/p[1]').text # 이름/학교명 텍스트 변화
