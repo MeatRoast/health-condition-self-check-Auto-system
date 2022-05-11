@@ -79,9 +79,7 @@ web.find_element_by_xpath('//*[@id="softBoardListLayer"]/div[2]/div[1]/ul/li/a')
 web.find_element_by_xpath('//*[@id="softBoardListLayer"]/div[2]/div[2]/input').click() # 이름 입력하기 클릭
 web.find_element_by_xpath('//*[@id="user_name_input"]').send_keys(named) # 이름 입력
 web.find_element_by_xpath('//*[@id="birthday_input"]').send_keys(bh) # 생년월일 입력
-web.find_element_by_xpath('//*[@id="btnConfirm"]').click() # 확인 클릭
-print('학교 통과 완료')
-time.sleep(1)
+time.sleep(0.5)
 # PASSWORD 입력부분
 web.find_elements_by_xpath('//*[@id="WriteInfoForm"]/table/tbody/tr/td/div')
 web.find_element_by_class_name('keyboard-icon').click()
